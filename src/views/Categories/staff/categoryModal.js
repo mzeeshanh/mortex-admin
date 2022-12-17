@@ -252,7 +252,7 @@ const StaffPermissionModal = (props) => {
                         <Row>
                             <div className="col-12">
                                 <h4 className="mb-0 mb-md-3 mt-0">
-                                    {props.modalType === 1 ? 'Add New' : props.modalType === 2 ? 'View' : 'Edit'} Product
+                                    {props.modalType === 1 ? 'Add New' : props.modalType === 2 ? 'View' : 'Edit'} Category
                                 </h4>
                             </div>
                         </Row>
@@ -260,19 +260,13 @@ const StaffPermissionModal = (props) => {
                     <Modal.Body className="modal-body">
                         <Form>
                             <Form.Group>
-                                <label className="text-white">Featured Images <span className="text-danger">*</span></label>
+                                <label className="text-white">Category Icon <span className="text-danger">*</span></label>
                                 <div className="input-holder">
                                     <input type="file" />
                                 </div>
                             </Form.Group>
                             <Form.Group>
-                                <label className="text-white">Related Images</label>
-                                <div className="input-holder">
-                                    <input type="file" multiple />
-                                </div>
-                            </Form.Group>
-                            <Form.Group>
-                                <label className="text-white">Product Name <span className="text-danger">*</span></label>
+                                <label className="text-white">Category Name <span className="text-danger">*</span></label>
                                 <Form.Control
                                     placeholder="Enter name"
                                     disabled={props.modalType === 2}
@@ -287,75 +281,20 @@ const StaffPermissionModal = (props) => {
                                 </span>
                             </Form.Group>
                             <Form.Group>
-                                <label className="text-white d-block">Category <span className="text-danger">*</span></label>
-                                <select disabled={props.modalType === 2} className="form-select pr-3 mr-3" aria-label="Default select example" name="roleId" value={roleId} onChange={(e) => setRoleId(e.target.value)} >
-                                    <option value='' className='text-dark'>Select Category</option>
-                                    {
-                                        props.roles ?
-                                            props.roles.length > 0 ?
-                                                props.roles.map((role, key) => {
-                                                    return (<option className='text-dark'  key={key} value={role._id}>{role.title}</option>);
-                                                }) : <option value='' disabled>No role found</option>
-                                            : ''
-                                    }
-                                </select>
-                                <span className={roleMsg ? `` : `d-none`}>
-                                    <label className="pl-1 text-danger">{roleMsg}</label>
+                                <label className="text-white">Sub Category</label>
+                                <Form.Control
+                                    placeholder="Enter sub category name"
+                                    disabled={props.modalType === 2}
+                                    type="text"
+                                    name="name"
+                                    onChange={(e) => setName(e.target.value)}
+                                    value={name}
+                                    required
+                                />
+                                <span className={nameMsg ? `` : `d-none`}>
+                                    <label className="pl-1 text-danger">{nameMsg}</label>
                                 </span>
                             </Form.Group>
-                            <Form.Group>
-                                <label className="text-white d-block">Sub Category <span className="text-danger">*</span></label>
-                                <select disabled={props.modalType === 2} className="form-select pr-3 mr-3" aria-label="Default select example" name="roleId" value={roleId} onChange={(e) => setRoleId(e.target.value)} >
-                                    <option value='' className='text-dark'>Select Sub Category</option>
-                                    {
-                                        props.roles ?
-                                            props.roles.length > 0 ?
-                                                props.roles.map((role, key) => {
-                                                    return (<option className='text-dark'  key={key} value={role._id}>{role.title}</option>);
-                                                }) : <option value='' disabled>No role found</option>
-                                            : ''
-                                    }
-                                </select>
-                                <span className={roleMsg ? `` : `d-none`}>
-                                    <label className="pl-1 text-danger">{roleMsg}</label>
-                                </span>
-                            </Form.Group>
-                            <Row>
-                                <Col>
-                                    <Form.Group>
-                                        <label className='text-white'>Product Code <span className="text-danger">*</span></label>
-                                        <Form.Control
-                                            placeholder="SKU-459"
-                                            disabled={props.modalType === 2}
-                                            type="text"
-                                            name="email"
-                                            onChange={(e) => setEmail(e.target.value)}
-                                            value={email}
-                                            required
-                                        />
-                                        <span className={emailMsg ? `` : `d-none`}>
-                                            <label className="pl-1 text-danger">{emailMsg}</label>
-                                        </span>
-
-                                    </Form.Group>
-                                </Col>
-                                <Col>
-                                    <Form.Group>
-                                        <label className='text-white'>Add In Feature Products <span className="text-danger">*</span></label>
-                                        <div className="position-relative">
-                                            <label class="mortex-toggle">
-                                                <input type="checkbox" />
-                                                <span class="slider round"></span>
-                                            </label>
-                                        </div>
-                                        <span className={emailMsg ? `` : `d-none`}>
-                                            <label className="pl-1 text-danger">{emailMsg}</label>
-                                        </span>
-
-                                    </Form.Group>
-                                </Col>
-                            </Row>
-                            
                         </Form>
                     </Modal.Body>
 

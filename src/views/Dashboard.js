@@ -215,7 +215,7 @@ function Dashboard(props) {
 								<Card className="table-big-boy">
 									<Card.Header>
 										<div className="d-block d-md-flex align-items-center justify-content-between">
-											<h4 className="card-title">Users</h4>
+											<h4 className="card-title">Products</h4>
 										</div>
 									</Card.Header>
 									<Card.Body className="table-full-width">
@@ -224,11 +224,9 @@ function Dashboard(props) {
 												<thead>
 													<tr>
 														<th className="td-start">#</th>
+														<th className="td-image-col">Image</th>
 														<th className="td-name td-name-col">Name</th>
-														<th className="td-email-col">Email</th>
-														<th className="text-center td-kyc-col">KYC Verified</th>
-														<th className="text-center td-created-col">Created At</th>
-														{/* <th className="td-actions text-center">Actions</th> */}
+														<th className='td-email'>Category</th>
 													</tr>
 												</thead>
 												<tbody>
@@ -238,41 +236,24 @@ function Dashboard(props) {
 																return (
 																	<tr key={index}>
 																		<td className="serial-col">{index + 1}</td>
+																		<td className="td-image-col">
+                                                                            <div className="product-image-holder">
+                                                                                <img className="img-fluid" src="https://via.placeholder.com/555x370" alt="" />
+                                                                            </div>
+                                                                        </td>
 																		<td className="td-name td-name-col">
 																			{user.firstName ? user.firstName + ' ' : 'N/A'} {user.firstName && user.lastName ? user.lastName : ''}
 																		</td>
-																		<td className="td-email-col">
+																		<td className="td-email">
 																			{user.email}
 																		</td>
-																		<td className='text-center td-kyc-col'>
-																			<span className={`${user.kycStatus ? 'bg-success' : 'bg-danger'} px-2 py-1 kyc-badge d-inline-block align-top`}>
-																				{user.kycStatus ? 'YES' : 'NO'}
-																			</span>
-																		</td>
-																		<td className="text-center td-created-col">{moment(user.createdAt).format('DD MMM YYYY')}</td>
-																		{/* <td className="td-actions text-center">
-																			<ul className="list-unstyled mb-0">
-																				<li className="d-inline-block align-top">
-																					<OverlayTrigger overlay={<Tooltip id="tooltip-897993903">View</Tooltip>} placement="left" >
-																						<Button
-																							className="btn-link btn-icon"
-																							type="button"
-																							variant="info"
-																							onClick={() => setModal(3, user._id)}
-																						>
-																							<i className="fas fa-eye"></i>
-																						</Button>
-																					</OverlayTrigger>
-																				</li>
-																			</ul>
-																		</td> */}
 																	</tr>
 																)
 															})
 															:
 															<tr>
-																<td colSpan="5" className="text-center">
-																	<div className="alert alert-info" role="alert">No User Found</div>
+																<td colSpan="4" className="text-center">
+																	<div className="alert alert-info" role="alert">No Prdoucts Found</div>
 																</td>
 															</tr>
 													}
@@ -281,7 +262,66 @@ function Dashboard(props) {
 										</div>
 										{
 											<div className="text-right px-3 py-4">
-												<Link to="/users" className="btn-filled">View All Users</Link>
+												<Link to="/products" className="btn-filled">View All Products</Link>
+											</div>
+										}
+									</Card.Body>
+								</Card>
+							</Col>
+						</Row>
+						<Row>
+							<Col sm={12}>
+								<Card className="table-big-boy">
+									<Card.Header>
+										<div className="d-block d-md-flex align-items-center justify-content-between">
+											<h4 className="card-title">Categories</h4>
+										</div>
+									</Card.Header>
+									<Card.Body className="table-full-width">
+										<div className="table-responsive">
+											<Table className="table-bigboy dshbrd-user-table">
+												<thead>
+													<tr>
+														<th className="td-start">#</th>
+														<th className="td-image-col">Image</th>
+														<th className="td-name td-name-col">Name</th>
+														<th className='td-email'>Sub Categories</th>
+													</tr>
+												</thead>
+												<tbody>
+													{
+														users && users.length ?
+															users.map((user, index) => {
+																return (
+																	<tr key={index}>
+																		<td className="serial-col">{index + 1}</td>
+																		<td className="td-image-col">
+                                                                            <div className="product-image-holder">
+                                                                                <img className="img-fluid" src="https://via.placeholder.com/555x370" alt="" />
+                                                                            </div>
+                                                                        </td>
+																		<td className="td-name td-name-col">
+																			{user.firstName ? user.firstName + ' ' : 'N/A'} {user.firstName && user.lastName ? user.lastName : ''}
+																		</td>
+																		<td className="td-email">
+																			{user.email}
+																		</td>
+																	</tr>
+																)
+															})
+															:
+															<tr>
+																<td colSpan="4" className="text-center">
+																	<div className="alert alert-info" role="alert">No Category Found</div>
+																</td>
+															</tr>
+													}
+												</tbody>
+											</Table>
+										</div>
+										{
+											<div className="text-right px-3 py-4">
+												<Link to="/categories" className="btn-filled">View All Categories</Link>
 											</div>
 										}
 									</Card.Body>

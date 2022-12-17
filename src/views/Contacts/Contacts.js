@@ -240,19 +240,19 @@ const Contacts = (props) => {
                                                         contacts && contacts.length ? contacts.map((item, index) => {
                                                             return (
                                                                 <tr key={index}>
-                                                                    <td className="text-white">{pagination && ((pagination.limit * pagination.page) - pagination.limit) + index + 1}</td>
-                                                                    <td className="text-white td-name">
+                                                                    <td className="">{pagination && ((pagination.limit * pagination.page) - pagination.limit) + index + 1}</td>
+                                                                    <td className=" td-name">
                                                                         {item.name}
                                                                     </td>
-                                                                    <td className="text-white td-email">
+                                                                    <td className=" td-email">
                                                                         {item.email}
                                                                     </td>
-                                                                    <td className="text-white td-status text-center">
-                                                                        <span className={`label text-white kyc-badge kyc-status-badge d-inline-block align-top px-2 py-1 ${item.status === 1 ? `label-danger` : item.status === 0 ? `label-warning` : item.status === 2 ? `label-success` : ``}`}>
+                                                                    <td className=" td-status text-center">
+                                                                        <span className={`label  kyc-badge kyc-status-badge d-inline-block align-top px-2 py-1 ${item.status === 1 ? `label-danger` : item.status === 0 ? `label-warning` : item.status === 2 ? `label-success` : ``}`}>
                                                                             {item.status === 0 ? 'In Progress' : item.status === 1 ? 'Pending' : item.status === 2 ? 'Closed' : 'N/A'}
                                                                         </span>
                                                                     </td>
-                                                                    <td className="td-actions text-white">
+                                                                    <td className="td-actions ">
                                                                         <ul className="list-unstyled mb-0">
 
                                                                             <li className="d-inline-block align-top">
@@ -275,7 +275,7 @@ const Contacts = (props) => {
                                                                                         <Button
                                                                                             className="btn-link btn-icon"
                                                                                             type="button"
-                                                                                            variant="success"
+                                                                                            variant="info"
                                                                                             onClick={() => {
                                                                                                 setModal(3, item._id);
                                                                                                 setTitle("Select Status")

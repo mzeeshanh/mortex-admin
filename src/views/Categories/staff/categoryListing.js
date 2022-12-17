@@ -10,7 +10,7 @@ import { toast } from 'react-toastify'
 import Pagination from 'rc-pagination';
 import { Link } from 'react-router-dom'
 import 'rc-pagination/assets/index.css';
-import StaffModal from './productModal'
+import StaffModal from './categoryModal'
 import localeInfo from 'rc-pagination/lib/locale/en_US';
 import { Button, Card, Form, Table, Container, Row, Col, OverlayTrigger, Tooltip, Modal, FormGroup } from "react-bootstrap";
 var CryptoJS = require("crypto-js");
@@ -190,18 +190,13 @@ const AdminStaff = (props) => {
                                             </Col>
                                             <Col xl={4} sm={6} className="search-wrap">
                                                 <Form.Group>
-                                                    <Form.Label className="d-block mb-2">Search with category</Form.Label>
-                                                    <Form.Control onKeyPress={handleKeyPress} name="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}></Form.Control>
-                                                </Form.Group>
-                                            </Col>
-                                            <Col xl={4} sm={6} className="search-wrap">
-                                                <Form.Group>
-                                                    <Form.Label className="d-block mb-2">Search with code</Form.Label>
+                                                    <Form.Label className="d-block mb-2">Search with sub category</Form.Label>
                                                     <Form.Control onKeyPress={handleKeyPress} name="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}></Form.Control>
                                                 </Form.Group>
                                             </Col>
                                             <Col xl={4} sm={6}>
                                                 <Form.Group>
+                                                <label className="d-none d-sm-block mb-2 form-label">&nbsp;</label>
                                                     <div className="d-flex filter-btns-holder">
                                                         <button type="button" className="btn-filled mr-3" onClick={onSearch} >
                                                             Search
@@ -217,14 +212,14 @@ const AdminStaff = (props) => {
                                 <Card className="table-big-boy">
                                     <Card.Header>
                                         <div className="d-flex align-items-center justify-content-between table-head">
-                                            <Card.Title as="h4">Products</Card.Title>
+                                            <Card.Title as="h4">Categories</Card.Title>
                                             {/* <p className="card-category">List of Categories</p> */}
                                             {currentUserRole && currentUserRole.addStaff ?
                                                 <Button className="btn-filled d-flex align-items-center" onClick={() => setModal(1)}>
                                                     <span className='add-icon mr-2'>
                                                         <FontAwesomeIcon icon={faPlus} />
                                                     </span>
-                                                    Add New Product</Button>
+                                                    Add New Category</Button>
                                                 :
                                                 ''
                                             }
@@ -238,8 +233,7 @@ const AdminStaff = (props) => {
                                                         <th className="td-start">#</th>
                                                         <th className="td-image-col">Image</th>
                                                         <th className='td-name'>Name</th>
-                                                        <th className='td-email'>Category</th>
-                                                        <th className="td-email">Sub Category</th>
+                                                        <th className="td-email">Sub Categories</th>
                                                         <th className='td-role'>Added At</th>
                                                         <th className="td-actions text-center">Actions</th>
                                                     </tr>
@@ -257,7 +251,6 @@ const AdminStaff = (props) => {
                                                                             </div>
                                                                         </td>
                                                                         <td className='td-name'>{val.name}</td>
-                                                                        <td className='td-email'>Category</td>
                                                                         <td className='td-email'>Sub Category</td>
                                                                         <th className='td-role'>{moment(val.createdAt).format('DD MMM YYYY')}</th>
                                                                         <td className="td-actions">
@@ -294,7 +287,7 @@ const AdminStaff = (props) => {
                                                             })
                                                             :
                                                             <tr>
-                                                                <td className="text-center px-0" colSpan="7">
+                                                                <td className="text-center px-0" colSpan="6">
                                                                     <span className="alert alert-danger d-block text-center">No Record Found</span>
                                                                 </td>
                                                             </tr>

@@ -228,7 +228,6 @@ const NewsLetter = (props) => {
                                             </Col>
                                             <Col xl={4} sm={6}>
                                                 <Form.Group>
-                                                    <Form.Label className="d-block mb-2">&nbsp;</Form.Label>
                                                     <div className="d-flex  filter-btns-holder">
                                                         <Button className="btn-filled mr-3" onClick={applyFilters}>Search</Button>
                                                         {resetButton && <Button variant="warning" className='outline-button' onClick={reset}>Reset</Button>}
@@ -296,16 +295,16 @@ const NewsLetter = (props) => {
                                                                         <span className="checkmark"></span>
                                                                         </label>
 																	</td> */}
-                                                                        <td className="serial-col text-white">{pagination && ((pagination.limit * pagination.page) - pagination.limit) + index + 1}</td>
-                                                                        <td className="text-white">
+                                                                        <td className="serial-col ">{pagination && ((pagination.limit * pagination.page) - pagination.limit) + index + 1}</td>
+                                                                        <td className="">
                                                                             <div className="faq-title td-email-col">
                                                                                 {item.email}
                                                                             </div>
                                                                         </td>
-                                                                        <td className="text-white">
+                                                                        <td className="">
                                                                             {item.ip}
                                                                         </td>
-                                                                        <td className="text-white td-created-col">
+                                                                        <td className=" td-created-col">
                                                                             {item.createdAt ? moment(item.createdAt).format('MMMM Do YYYY, h:mm:ss a') : 'N/A'}
                                                                         </td>
                                                                     </tr>

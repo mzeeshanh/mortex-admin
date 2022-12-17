@@ -200,12 +200,12 @@ const EmailTemplates = (props) => {
                                                             emails.map((email, index) => {
                                                                 return (
                                                                     <tr key={index}>
-                                                                        <td className="text-center serial-col text-white">{pagination && ((pagination.limit * pagination.page) - pagination.limit) + index + 1}</td>
+                                                                        <td className="text-center serial-col ">{pagination && ((pagination.limit * pagination.page) - pagination.limit) + index + 1}</td>
 
-                                                                        <td className='text-white td-type'>
+                                                                        <td className=' td-type'>
                                                                             {email.type}
                                                                         </td>
-                                                                        <td className='text-white td-description'>
+                                                                        <td className=' td-description'>
                                                                             {email.subject}
                                                                         </td>
 
@@ -219,7 +219,7 @@ const EmailTemplates = (props) => {
                                                                                                 <Button
                                                                                                     className="btn-link btn-icon"
                                                                                                     type="button"
-                                                                                                    variant="success"
+                                                                                                    variant="info"
                                                                                                     onClick={() => {
                                                                                                         setLoader(true);
                                                                                                         props.history.push(`/email-template/${email._id}`);
@@ -233,7 +233,7 @@ const EmailTemplates = (props) => {
                                                                                 }
                                                                                 <li className="d-inline-block align-top">
                                                                                     <OverlayTrigger overlay={<Tooltip id="tooltip-436082023">Delete</Tooltip>} placement="left">
-                                                                                        <button type="button" className="btn-link btn-icon btn btn-danger" onClick={() => { deleteEmail(email._id) }}><i className="fas fa-trash"></i></button>
+                                                                                        <button type="button" className="btn-link btn-icon btn btn-info" onClick={() => { deleteEmail(email._id) }}><i className="fas fa-trash"></i></button>
                                                                                     </OverlayTrigger>
                                                                                 </li>
                                                                             </ul>

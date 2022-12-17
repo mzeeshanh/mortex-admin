@@ -4,6 +4,7 @@ import UnAuth from 'layouts/Auth';
 
 import Dashboard from "views/Dashboard.js";
 import Products from "views/Products/staff/productsListing"
+import Categories from "views/Categories/staff/categoryListing";
 import Login from "./views/Login/Login";
 import Users from "./views/Users/Users"
 import SiteSettings from "views/Settings/SiteSettings";
@@ -77,6 +78,16 @@ var routes = [
     access: true,
     exact: true,
     component: Products,
+    showInSideBar: true
+  },
+  {
+    path: "/categories",
+    layout: Admin,
+    name: "Categories",
+    icon: "nc-icon nc-layers-3",
+    access: true,
+    exact: true,
+    component: Categories,
     showInSideBar: true
   },
   {

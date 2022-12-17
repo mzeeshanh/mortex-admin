@@ -201,16 +201,16 @@ const ContentManagementSystem = (props) => {
                                                             data.map((item, index) => {
                                                                 return (
                                                                     <tr key={index}>
-                                                                        <td className="serial-col text-white">{pagination && ((pagination.limit * pagination.page) - pagination.limit) + index + 1}</td>
-                                                                        <td className="text-white">
-                                                                            <div className="faq-title td-name">
+                                                                        <td className="serial-col ">{pagination && ((pagination.limit * pagination.page) - pagination.limit) + index + 1}</td>
+                                                                        <td className="">
+                                                                            <div className="td-name">
                                                                                 {item.title}
                                                                             </div>
                                                                         </td>
-                                                                        <td className="text-white">
+                                                                        <td className="">
                                                                             {item.slug}
                                                                         </td>
-                                                                        <td className="text-white text-center">
+                                                                        <td className=" text-center">
                                                                             <span className={`label kyc-badge kyc-status-badge d-inline-block align-top px-2 py-1 ${item.status ? 'label-success' : 'label-danger'}`}>{item.status ? 'Active' : 'Inactive'}</span>
                                                                         </td>
                                                                         {(permissions?.editContent || permissions?.deleteContent) &&
@@ -235,7 +235,7 @@ const ContentManagementSystem = (props) => {
                                                                                                 <Button
                                                                                                     className="btn-link btn-icon"
                                                                                                     type="button"
-                                                                                                    variant="success"
+                                                                                                    variant="info"
                                                                                                     onClick={() => props.history.push(`/edit-cms/${window.btoa(item._id)}`)}
                                                                                                 >
                                                                                                     <i className="fas fa-edit"></i>
@@ -250,7 +250,7 @@ const ContentManagementSystem = (props) => {
                                                                                                 <Button
                                                                                                     className="btn-link btn-icon"
                                                                                                     type="button"
-                                                                                                    variant="danger"
+                                                                                                    variant="info"
                                                                                                     onClick={() => deleteCMS(item._id)}
                                                                                                 >
                                                                                                     <i className="fas fa-trash"></i>
