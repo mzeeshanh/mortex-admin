@@ -261,8 +261,11 @@ const StaffPermissionModal = (props) => {
                         <Form>
                             <Form.Group>
                                 <label className="text-white">Category Icon <span className="text-danger">*</span></label>
-                                <div className="input-holder">
+                                <div className="input-file-holder position-relative mb-3">
                                     <input type="file" />
+                                    <span className="icon-upload">
+                                        <i className="nc-icon nc-cloud-upload-94"></i>
+                                    </span>
                                 </div>
                             </Form.Group>
                             <Form.Group>

@@ -176,13 +176,30 @@ const SiteSettings = (props) => {
 											<Row>
 												<Col xl={4} sm={6}>
 													<Form.Group>
+														<Form.Label className="d-block mb-2">Site Name</Form.Label>
+														<Form.Control type="email" value={settings.email} onChange={(e) => { setSettings({ ...settings, email: e.target.value }) }}></Form.Control>
+													</Form.Group>
+													<span className={msg.email ? `` : `d-none`}>
+														<label className="pl-1 pt-0 text-danger">{msg.email}</label>
+													</span>
+												</Col>
+												<Col xl={4} sm={6}>
+													<Form.Group>
+														<Form.Label className="d-block mb-2">Site Tagline</Form.Label>
+														<Form.Control type="email" value={settings.email} onChange={(e) => { setSettings({ ...settings, email: e.target.value }) }}></Form.Control>
+													</Form.Group>
+													<span className={msg.email ? `` : `d-none`}>
+														<label className="pl-1 pt-0 text-danger">{msg.email}</label>
+													</span>
+												</Col>
+												<Col xl={4} sm={6}>
+													<Form.Group>
 														<Form.Label className="d-block mb-2">Site Email</Form.Label>
 														<Form.Control type="email" value={settings.email} onChange={(e) => { setSettings({ ...settings, email: e.target.value }) }}></Form.Control>
 													</Form.Group>
 													<span className={msg.email ? `` : `d-none`}>
 														<label className="pl-1 pt-0 text-danger">{msg.email}</label>
 													</span>
-
 												</Col>
 												<Col xl={4} sm={6}>
 													<Form.Group>
@@ -208,40 +225,37 @@ const SiteSettings = (props) => {
 														<Form.Control type="text" value={settings.address} onChange={(e) => { setSettings({ ...settings, address: e.target.value }) }} ></Form.Control>
 													</Form.Group>
 												</Col>
-												<Col xl={4} sm={6}>
+												<Col sm={12}>
 													<Form.Group>
 														<Form.Label className="d-block mb-2">Footer Description</Form.Label>
-														<Form.Control type="text" value={settings.desc} onChange={(e) => { setSettings({ ...settings, desc: e.target.value }) }} ></Form.Control>
+														<textarea className="form-control" type="text" value={settings.desc} onChange={(e) => { setSettings({ ...settings, desc: e.target.value }) }} ></textarea>
 													</Form.Group>
 												</Col>
-												<Col xl={4} sm={6}>
+											</Row>
+											<Row>
+												<Col sm={12}>
 													<Form.Group>
-														<Form.Label className="d-block mb-2">Mailgun Domain</Form.Label>
-														<Form.Control type="text" value={settings.domain} onChange={(e) => { setSettings({ ...settings, domain: e.target.value }) }} ></Form.Control>
-														<span className={msg.domain ? `` : `d-none`}>
-															<label className="pl-1 pt-0 text-danger">{msg.domain}</label>
-														</span>
+														<Form.Label className="d-block mb-2">Add Banner</Form.Label>
+														<div className="input-file-holder position-relative mb-3">
+															<input type="file" />
+															<span className="icon-upload">
+																<i className="nc-icon nc-cloud-upload-94"></i>
+															</span>
+														</div>
 													</Form.Group>
 												</Col>
-												<Col xl={4} sm={6}>
+												<Col sm={12}>
 													<Form.Group>
-														<Form.Label className="d-block mb-2">Mailgun Api-Key</Form.Label>
-														<Form.Control type="text" value={settings.api} onChange={(e) => { setSettings({ ...settings, api: e.target.value }) }} ></Form.Control>
-														<span className={msg.api ? `` : `d-none`}>
-															<label className="pl-1 pt-0 text-danger">{msg.api}</label>
-														</span>
+														<Form.Label className="d-block mb-2">Home Banners</Form.Label>
+														<div className="input-file-holder position-relative mb-3">
+															<input type="file" />
+															<span className="icon-upload">
+																<i className="nc-icon nc-cloud-upload-94"></i>
+															</span>
+														</div>
+														<Button className="outline-button" onClick={submit}>Add Home Banner</Button>
 													</Form.Group>
 												</Col>
-												<Col xl={4} sm={6}>
-													<Form.Group>
-														<Form.Label className="d-block mb-2">Referrer Percentage %</Form.Label>
-														<Form.Control type="number" value={settings.referrarPercentage} onChange={(e) => { setSettings({ ...settings, referrarPercentage: e.target.value }) }} ></Form.Control>
-														<span className={msg.referrarPercentage ? `` : `d-none`}>
-															<label className="pl-1 pt-0 text-danger">{msg.referrarPercentage}</label>
-														</span>
-													</Form.Group>
-												</Col>
-
 											</Row>
 										</Card.Body>
 

@@ -5,6 +5,7 @@ import UnAuth from 'layouts/Auth';
 import Dashboard from "views/Dashboard.js";
 import Products from "views/Products/staff/productsListing"
 import Categories from "views/Categories/staff/categoryListing";
+import Gallery from "views/Gallery/Gallery";
 import Login from "./views/Login/Login";
 import Users from "./views/Users/Users"
 import SiteSettings from "views/Settings/SiteSettings";
@@ -461,6 +462,15 @@ var routes = [
     icon: "nc-icon nc-bulb-63",
     access: true, exact: true,
     component: ViewCMS,
+  },
+  {
+    path: "/gallery",
+    layout: Admin,
+    name: "Gallery",
+    icon: "nc-icon nc-album-2",
+    access: true, exact: true,
+    component: Gallery,
+    showInSideBar: true,
   },
   // {
   //   path: "/edit-cms/:contentId",

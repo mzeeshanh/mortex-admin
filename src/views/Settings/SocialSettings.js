@@ -183,10 +183,10 @@ const SocialSettings = (props) => {
 											<Row>
 												<Col xl={4} sm={6}>
 													<Form.Group>
-														<Form.Label className="d-block mb-2">Discord</Form.Label>
-														<Form.Control type="text" value={links.discord} onChange={(e) => setLinks({ ...links, discord: e.target.value })} ></Form.Control>
-														<span className={msg.discord ? `` : `d-none`}>
-															<label className="pl-1 pt-0 text-danger">{msg.discord}</label>
+														<Form.Label className="d-block mb-2">Facebook</Form.Label>
+														<Form.Control type="text" value={links.facebook} onChange={(e) => setLinks({ ...links, facebook: e.target.value })} ></Form.Control>
+														<span className={msg.facebook ? `` : `d-none`}>
+															<label className="pl-1 pt-0 text-danger">{msg.facebook}</label>
 														</span>
 													</Form.Group>
 												</Col>
@@ -201,37 +201,10 @@ const SocialSettings = (props) => {
 												</Col>
 												<Col xl={4} sm={6}>
 													<Form.Group>
-														<Form.Label className="d-block mb-2">YouTube</Form.Label>
-														<Form.Control type="text" value={links.youtube} onChange={(e) => setLinks({ ...links, youtube: e.target.value })}></Form.Control>
-														<span className={msg.youtube ? `` : `d-none`}>
-															<label className="pl-1 pt-0 text-danger">{msg.youtube}</label>
-														</span>
-													</Form.Group>
-												</Col>
-												<Col xl={4} sm={6}>
-													<Form.Group>
 														<Form.Label className="d-block mb-2">Instagram </Form.Label>
 														<Form.Control type="text" value={links.instagram} onChange={(e) => setLinks({ ...links, instagram: e.target.value })} ></Form.Control>
 														<span className={msg.instagram ? `` : `d-none`}>
 															<label className="pl-1 pt-0 text-danger">{msg.instagram}</label>
-														</span>
-													</Form.Group>
-												</Col>
-												<Col xl={4} sm={6}>
-													<Form.Group>
-														<Form.Label className="d-block mb-2">Medium</Form.Label>
-														<Form.Control type="text" value={links.medium} onChange={(e) => setLinks({ ...links, medium: e.target.value })} ></Form.Control>
-														<span className={msg.medium ? `` : `d-none`}>
-															<label className="pl-1 pt-0 text-danger">{msg.medium}</label>
-														</span>
-													</Form.Group>
-												</Col>
-												<Col xl={4} sm={6}>
-													<Form.Group>
-														<Form.Label className="d-block mb-2">Telegram</Form.Label>
-														<Form.Control type="text" value={links.telegram} onChange={(e) => setLinks({ ...links, telegram: e.target.value })} ></Form.Control>
-														<span className={msg.telegram ? `` : `d-none`}>
-															<label className="pl-1 pt-0 text-danger">{msg.telegram}</label>
 														</span>
 													</Form.Group>
 												</Col>
@@ -246,19 +219,10 @@ const SocialSettings = (props) => {
 												</Col>
 												<Col xl={4} sm={6}>
 													<Form.Group>
-														<Form.Label className="d-block mb-2">Facebook</Form.Label>
-														<Form.Control type="text" value={links.facebook} onChange={(e) => setLinks({ ...links, facebook: e.target.value })} ></Form.Control>
-														<span className={msg.facebook ? `` : `d-none`}>
-															<label className="pl-1 pt-0 text-danger">{msg.facebook}</label>
-														</span>
-													</Form.Group>
-												</Col>
-												<Col xl={4} sm={6}>
-													<Form.Group>
-														<Form.Label className="d-block mb-2">Reddit</Form.Label>
-														<Form.Control type="text" value={links.reddit} onChange={(e) => setLinks({ ...links, reddit: e.target.value })} ></Form.Control>
-														<span className={msg.reddit ? `` : `d-none`}>
-															<label className="pl-1 pt-0 text-danger">{msg.reddit}</label>
+														<Form.Label className="d-block mb-2">YouTube</Form.Label>
+														<Form.Control type="text" value={links.youtube} onChange={(e) => setLinks({ ...links, youtube: e.target.value })}></Form.Control>
+														<span className={msg.youtube ? `` : `d-none`}>
+															<label className="pl-1 pt-0 text-danger">{msg.youtube}</label>
 														</span>
 													</Form.Group>
 												</Col>
