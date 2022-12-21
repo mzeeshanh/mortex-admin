@@ -593,25 +593,25 @@ input:focus {
     cursor: not-allowed !important;
     pointer-events:all;
 }
-.filter-card form.control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+.filter-card form.control::-webkit-input-placeholder {
     color:#fff;
 }
-.filter-card form.control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+.filter-card form.control:-moz-placeholder { 
    color:#fff;
    opacity:  1;
 }
-.filter-card form.control::-moz-placeholder { /* Mozilla Firefox 19+ */
+.filter-card form.control::-moz-placeholder {
    color:#fff;
    opacity:  1;
 }
-.filter-card form.control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.filter-card form.control:-ms-input-placeholder { 
    color:#fff;
 }
-.filter-card form.control::-ms-input-placeholder { /* Microsoft Edge */
+.filter-card form.control::-ms-input-placeholder {
    color:#fff;
 }
 
-.filter-card form.control::placeholder { /* Most modern browsers support this now. */
+.filter-card form.control::placeholder {
    color:#fff;
 }
 img.img-holder.img-fluid {
@@ -642,3 +642,28 @@ img.img-holder.img-fluid {
     padding:3px;
     border-radius:2px;
 }
+
+
+
+.modal .form-control::-webkit-input-placeholder {
+    color:    #fff;
+}
+.modal .form-control:-moz-placeholder { 
+   color:    #fff;
+   opacity:  1;
+}
+.modal .form-control::-moz-placeholder {
+   color:    #fff;
+   opacity:  1;
+}
+.modal .form-control:-ms-input-placeholder {
+   color:    #fff;
+}
+.modal .form-control::-ms-input-placeholder {
+   color:    #fff;
+}
+.modal .form-control::placeholder {
+   color:    #fff;
+}
+.modal .form-control,
+.modal .form-control:focus{color:#fff !important;border:1px solid #fff !important;}

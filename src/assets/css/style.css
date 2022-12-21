@@ -88,7 +88,7 @@ nav.navbar.navbar-expand-lg.navbar-light {
     border-radius: 8px;
     background: #56D0F7 !important;
     position: relative;
-    z-index: 99999999;
+    z-index: 00099;
     color: #f2f2f2;
 }
 
@@ -425,25 +425,25 @@ a#dropdown-41471887333 i {
 /*ck-editor*/
 .ck.ck-editor__main>.ck-editor__editable {
     background: transparent !important;
-    border: 1px solid #fff !important;
-    color: #fff;
+    border: 1px solid #000 !important;
+    color: #000;
     min-height: 150px;
     border-bottom-left-radius: 8px !important;
     border-bottom-right-radius: 8px !important;
 }
 
 .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
-    border-color: #fff !important;
+    border-color: #000 !important;
 }
 
 .ck.ck-toolbar {
     background: transparent !important;
-    border: 1px solid #fff !important;
-    color: #fff;
+    border: 1px solid #000 !important;
+    color: #000;
 }
 
 button.ck.ck-button.ck-off {
-    color: #fff;
+    color: #000;
 }
 
 .ck.ck-button:not(.ck-disabled):hover,
@@ -453,8 +453,8 @@ a.ck.ck-button:not(.ck-disabled):hover {
 
 .ck.ck-dropdown .ck-dropdown__panel .ck-list {
     background: transparent !important;
-    border: 1px solid #fff !important;
-    color: #fff;
+    border: 1px solid #000 !important;
+    color: #000;
 }
 
 
@@ -475,12 +475,12 @@ a.ck.ck-button:not(.ck-disabled):hover {
 
 .ck.ck-list__item .ck-button.ck-on {
     background: #021761 !important;
-    color: #fff !important;
+    color: #000 !important;
 }
 
 .ck.ck-list__item .ck-button:hover:not(.ck-disabled) {
     background: #021761 !important;
-    color: #fff !important;
+    color: #000 !important;
 }
 
 .ck.ck-button.ck-on:not(.ck-disabled):hover,
@@ -490,11 +490,11 @@ a.ck.ck-button:not(.ck-disabled):hover,
 .ck.ck-button.ck-on,
 a.ck.ck-button.ck-on {
     background-color: transparent !important;
-    color: #fff !important;
+    color: #000 !important;
 }
 
 .ck.ck-toolbar.ck-toolbar_grouping {
-    border-bottom: 1px solid #fff !important;
+    border-bottom: 1px solid #000 !important;
 }
 
 th {
@@ -503,7 +503,7 @@ th {
 
 /* .table-bigboy .td-name { min-width: 170px;} */
 span.ck-table-bogus-paragraph {
-    color: #fff;
+    color: #000;
 }
 
 .btn-filled,
@@ -600,7 +600,6 @@ fieldset[disabled] .form-control {
     word-break: break-all !important;
     /* width: 480px !important; */
     display: -webkit-box;
-    color: #fff;
 }
 
 .text-truncate {
@@ -857,7 +856,7 @@ a:focus {
 /*card*/
 .card {
     background:transparent;
-    border:1px solid #c5c5c5;
+    border:1px solid #000;
     border-radius: 10px;
 }
 
@@ -1025,7 +1024,7 @@ a:focus {
     border-radius: 8px;
     background: #5d8aff;
     position: relative;
-    z-index: 99999999;
+    z-index: 00099;
     color: #f2f2f2;
 }
 
@@ -1034,7 +1033,7 @@ a:focus {
     border-radius: 8px;
     background: #5d8aff;
     position: relative;
-    z-index: 99999999;
+    z-index: 00099;
     color: #f2f2f2;
 }
 

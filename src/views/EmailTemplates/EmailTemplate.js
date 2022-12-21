@@ -137,7 +137,7 @@ const EmailTemplate = (props) => {
                                 <Card className="pb-3">
                                     <Card.Header>
                                         <Card.Title as="h4" className='mb-3'>Email Template</Card.Title>
-                                        <p className="card-collection text-white">Note: Make sure you {addCheck ? 'add' : 'edit'} content using source &amp; don't {addCheck ? 'add' : 'edit'} keywords starting &amp; ending with $$ (e.g. $$USER$$) or special text inside x tag.</p>
+                                        <p className="card-collection">Note: Make sure you {addCheck ? 'add' : 'edit'} content using source &amp; don't {addCheck ? 'add' : 'edit'} keywords starting &amp; ending with $$ (e.g. $$USER$$) or special text inside x tag.</p>
                                     </Card.Header>
                                     <Card.Body>
                                         <Row>

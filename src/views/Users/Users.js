@@ -389,7 +389,7 @@ const Users = (props) => {
                                                             })
                                                             :
                                                             <tr>
-                                                                <td colSpan="12" className="text-center">
+                                                                <td colSpan="5" className="text-center">
                                                                     <div className="alert alert-info" role="alert">No User Found</div>
                                                                 </td>
                                                             </tr>

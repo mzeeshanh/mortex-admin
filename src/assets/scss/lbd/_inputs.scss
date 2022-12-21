@@ -5,7 +5,7 @@
    @include placeholder($medium-gray,1);
 }
 .form-control::-webkit-input-placeholder{
-   @include placeholder($medium-gray,1);
+//    @include placeholder($medium-gray,1);
 }
 .form-control:-ms-input-placeholder{
    @include placeholder($medium-gray,1);
